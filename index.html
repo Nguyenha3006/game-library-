@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Lib</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 24px; background: #111; color: #eee; }
+    h1 { margin: 0 0 16px; }
+    ul { list-style: none; padding: 0; display: grid; gap: 8px; }
+    li { background: #222; padding: 12px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Game Library</h1>
+  <ul id="list"></ul>
+  <script>
+    // Draft: static data, replace with API call later
+    const games = [
+      { id: 1, title: "Sample Game A", genre: "Action" },
+      { id: 2, title: "Sample Game B", genre: "Puzzle" },
+    ];
+    const list = document.getElementById("list");
+    for (const g of games) {
+      const li = document.createElement("li");
+      li.textContent = `${g.title} — ${g.genre}`;
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>
